@@ -1,11 +1,12 @@
-
+const storeData = require('../services/storeData');
 const predictClassification = require('../services/inferenceService');
 const crypto = require('crypto');
 
 async function postPredictHandler(request, h) {
   const { image } = request.payload;
   const { model } = request.server.app;
-
+  await storeData(id, data);
+  
   // Cek ukuran payload untuk menghindari 413
   if (Buffer.byteLength(image, 'base64') > 1000000) {
     return h.response({

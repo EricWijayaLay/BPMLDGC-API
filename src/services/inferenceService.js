@@ -18,11 +18,9 @@ async function predictClassification(model, image) {
   let explanation, suggestion;
  
   if (label === 'Cancer') {
-    explanation = "Melanocytic nevus adalah kondisi di mana permukaan kulit memiliki bercak warna yang berasal dari sel-sel melanosit, yakni pembentukan warna kulit dan rambut.";
-    suggestion = "Segera konsultasi dengan dokter terdekat jika ukuran semakin membesar dengan cepat, mudah luka atau berdarah.";
+    suggestion = "Segera periksa ke dokter!";
   } else if (label === 'Non-cancer') {
-    explanation = "Kondisi ini tidak teridentifikasi sebagai kanker, namun tetap perlu perhatian medis.";
-    suggestion = "Disarankan untuk memonitor perubahan kondisi kulit dan berkonsultasi dengan dokter jika ada perubahan signifikan.";
+    suggestion = "Penyakit kanker tidak terdeteksi.";
   }
 
   const result = {
